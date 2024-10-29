@@ -23,7 +23,6 @@
             from {
                 opacity: 0;
             }
-
             to {
                 opacity: 1;
             }
@@ -37,31 +36,39 @@
 
 <body class="bg-black text-white">
     <!-- Header -->
-    <!-- Header -->
     <header id="navbar" class="fixed w-full top-0 left-0 z-20 p-6 transition-all duration-500 ease-in-out navbar-bg">
-        <nav class="container mx-auto flex justify-around items-center">
+        <nav class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
             <a href="/" class="text-white text-2xl font-bold transition-transform hover:scale-105">
                 <img src="assets/logo2.png" alt="Bacardi Breezer Logo" width="100" height="100">
             </a>
-            <ul class="flex space-x-6">
-                <li><a href="/"
-                        class="yellow-badge text-black hover:bg-yellow-500 transition-colors duration-300">CONOCE MÁS DE
-                        BACARDI</a></li>
-                <li><a href="/show"
-                        class="yellow-badge text-black hover:bg-yellow-500 transition-colors duration-300">DEJA EL
-                        SHOW</a></li>
-                <li><a href="/promos"
-                        class="yellow-badge text-black hover:bg-yellow-500 transition-colors duration-300">MERCH &
-                        PROMOS</a></li>
-                <li><a href="/registro"
-                        class="yellow-badge text-black hover:bg-yellow-500 transition-colors duration-300">REGISTRO</a>
-                </li>
-                <li><a href="/compra"
-                        class="yellow-badge text-black hover:bg-yellow-500 transition-colors duration-300">COMPRA EN
-                        Ta-Da</a></li>
+            <ul id="menu" class="hidden lg:flex space-x-6">
+                <li><a href="#equipo" class="yellow-badge text-black hover:bg-yellow-500 transition-colors duration-300">CONOCE MÁS DE BACARDI</a></li>
+                <li><a href="#bebidas" class="yellow-badge text-black hover:bg-yellow-500 transition-colors duration-300">NUESTRA BEBÍDAS</a></li>
+                <li><a href="#sabores" class="yellow-badge text-black hover:bg-yellow-500 transition-colors duration-300">SABORES</a></li>
+                <li><a href="#eventos" class="yellow-badge text-black hover:bg-yellow-500 transition-colors duration-300">EVENTOS</a></li>
+                <li><a href="#cocteles" class="yellow-badge text-black hover:bg-yellow-500 transition-colors duration-300">MESCLAZ Y CÓCTELES </a></li>
             </ul>
+            <!-- Hamburger Menu for Mobile -->
+            <button id="menu-btn" class="lg:hidden flex items-center px-3 py-2 border rounded text-white border-gray-400 hover:text-yellow-500 hover:border-yellow-500">
+                <svg class="fill-current   h-6 w-6" viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
         </nav>
     </header>
+
+    <!-- Fullscreen Mobile Navigation Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-90 hidden z-30 flex flex-col items-center justify-center">
+        <ul class="space-y-8 text-center">
+            <li><a href="#equipo" class="yellow-badge text-black hover:bg-yellow-500 transition-colors duration-300">CONOCE MÁS DE BACARDI</a></li>
+            <li><a href="#bebidas" class="yellow-badge text-black hover:bg-yellow-500 transition-colors duration-300">NUESTRAS BEBÍDAS</a></li>
+            <li><a href="#sabores" class="yellow-badge text-black hover:bg-yellow-500 transition-colors duration-300">SABORES</a></li>
+            <li><a href="#eventos" class="yellow-badge text-black hover:bg-yellow-500 transition-colors duration-300">EVENTOS</a></li>
+            <li><a href="#cocteles" class="yellow-badge text-black hover:bg-yellow-500 transition-colors duration-300">MEZCLAS Y CÓCTELES</a></li>
+        </ul>
+        <button id="close-menu" class="mt-8 text-white text-2xl font-bold hover:text-yellow-500">Cerrar</button>
+    </div>
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
         <img src="assets/banner3.png" alt="Tropical beach background" class="absolute w-full h-full object-cover">
@@ -84,15 +91,13 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section id="equipo">
             <div class="bg-black py-24 sm:py-32">
                 <div class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
                     <div class="max-w-xl">
-                        <h2 class="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Meet the Bacardi
-                            Breezer Team</h2>
+                        <h2 class="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Conoce al Equipo de Bacardi Breezer</h2>
                         <p class="mt-6 text-lg text-gray-300">
-                            We’re a dynamic group of individuals who are passionate about bringing vibrant flavors and
-                            memorable experiences to our consumers. Our team is dedicated to excellence and innovation.
+                            Somos un equipo dinámico y apasionado por llevar sabores frutales vibrantes y experiencias memorables a nuestros consumidores. Nos dedicamos a la excelencia e innovación en la creación de bebidas de alta calidad.
                         </p>
                     </div>
                     <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
@@ -103,7 +108,7 @@
                                     alt="Leslie Alexander">
                                 <div>
                                     <h3 class="text-base font-semibold tracking-tight text-white">Leslie Alexander</h3>
-                                    <p class="text-sm font-semibold text-yellow-500">Co-Founder / CEO</p>
+                                    <p class="text-sm font-semibold text-yellow-500">Co-Fundadora / CEO</p>
                                 </div>
                             </div>
                         </li>
@@ -114,7 +119,7 @@
                                     alt="Michael Scott">
                                 <div>
                                     <h3 class="text-base font-semibold tracking-tight text-white">Michael Scott</h3>
-                                    <p class="text-sm font-semibold text-yellow-500">Head of Marketing</p>
+                                    <p class="text-sm font-semibold text-yellow-500">Director de Marketing</p>
                                 </div>
                             </div>
                         </li>
@@ -125,7 +130,7 @@
                                     alt="Sarah Walker">
                                 <div>
                                     <h3 class="text-base font-semibold tracking-tight text-white">Sarah Walker</h3>
-                                    <p class="text-sm font-semibold text-yellow-500">Creative Director</p>
+                                    <p class="text-sm font-semibold text-yellow-500">Directora Creativa</p>
                                 </div>
                             </div>
                         </li>
@@ -136,16 +141,17 @@
                                     alt="Anna Kim">
                                 <div>
                                     <h3 class="text-base font-semibold tracking-tight text-white">Anna Kim</h3>
-                                    <p class="text-sm font-semibold text-yellow-500">Product Manager</p>
+                                    <p class="text-sm font-semibold text-yellow-500">Gerente de Producto</p>
                                 </div>
                             </div>
                         </li>
-                        <!-- More people... -->
+                        <!-- Más personas... -->
                     </ul>
                 </div>
             </div>
         </section>
-        <section class="py-20 bg-gradient-to-b  to-black">
+        
+        <section class="py-20 bg-gradient-to-b  to-black" id="bebidas">
             <div class="container mx-auto px-4">
                 <h2
                     class="text-5xl font-extrabold text-center mb-12 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-transparent bg-clip-text">
@@ -175,7 +181,7 @@
             </div>
         </section>
         <!-- Seccion de sabores  -->
-        <section class="py-24">
+        <section class="py-24" id="sabores">
             <div class="max-w-7xl mx-auto px-6 lg:px-8">
                 <h2
                     class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-transparent bg-clip-text">
@@ -202,7 +208,7 @@
         </section>
         <!-- seccionde clientes  -->
       
-        <section class="py-24 overflow-hidden">
+        <section class="py-24 overflow-hidden" id="eventos">
             <div class="max-w-7xl mx-auto px-6 lg:px-8">
                 <h2 class="text-4xl font-bold text-center mb-12 gradient-text bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500">
                     Eventos Bacardi Breezer
@@ -228,21 +234,40 @@
                 </button>
             </div>
         </div>
-        <section class="bg-black py-24 text-white">
+        <section class="py-24" id="cocteles">
             <div class="max-w-7xl mx-auto px-6 lg:px-8">
-                <h2 class="text-3xl font-semibold text-center mb-12">Inspiración y Tips</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <article>
-                        <h3 class="text-xl font-bold">5 Cócteles Refrescantes con Bacardi Breezer</h3>
-                        <p class="mt-2 text-gray-300">Descubre recetas fáciles para preparar cócteles únicos en casa.
-                        </p>
-                    </article>
-                    <article>
-                        <h3 class="text-xl font-bold">Tendencias de Bebidas para el 2024</h3>
-                        <p class="mt-2 text-gray-300">Mantente a la vanguardia con lo que viene en el mundo de las
-                            bebidas.</p>
-                    </article>
-                    <!-- Más artículos... -->
+                <h2 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-transparent bg-clip-text">
+                    Mezclas y Cócteles con Bacardi Breezer
+                </h2>
+    
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div id="cocktailCarousel" class="relative h-96 bg-gray-800 rounded-lg overflow-hidden">
+                        <!-- Las imágenes de cócteles se generarán aquí -->
+                    </div>
+                    <div id="cocktailInfo" class="bg-gray-800 rounded-lg p-6">
+                        <!-- La información del cóctel se generará aquí -->
+                    </div>
+                </div>
+    
+                <div class="mt-12">
+                    <h3 class="text-2xl font-semibold mb-6">Tips para Mezclas Perfectas</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-gray-800 rounded-lg p-6">
+                            <i class="fas fa-ice-cube text-3xl text-yellow-400 mb-4"></i>
+                            <h4 class="text-xl font-bold mb-2">Usa Hielo de Calidad</h4>
+                            <p class="text-gray-300">El hielo grande se derrite más lentamente, manteniendo tu bebida fría sin diluirla.</p>
+                        </div>
+                        <div class="bg-gray-800 rounded-lg p-6">
+                            <i class="fas fa-lemon text-3xl text-yellow-400 mb-4"></i>
+                            <h4 class="text-xl font-bold mb-2">Frutas Frescas</h4>
+                            <p class="text-gray-300">Usa frutas frescas para obtener el mejor sabor y aroma en tus cócteles.</p>
+                        </div>
+                        <div class="bg-gray-800 rounded-lg p-6">
+                            <i class="fas fa-glass-martini-alt text-3xl text-yellow-400 mb-4"></i>
+                            <h4 class="text-xl font-bold mb-2">La Copa Importa</h4>
+                            <p class="text-gray-300">Elige la copa adecuada para cada cóctel para realzar su aroma y presentación.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -274,24 +299,44 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script>
+        // Toggle mobile menu visibility
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+        });
+    </script>
+    <script>
         const products = {
-            'Refrescos': [
-                { id: 1, name: 'Ceresa + Ron', price: 15, image: 'assets/1.png' },
-                { id: 2, name: 'Pepsi', price: 15, image: 'assets/2.png' },
-                { id: 3, name: 'Sprite', price: 15, image: 'assets/3.png' },
-                { id: 4, name: 'Fanta', price: 1.50, image: 'assets/4.png' },
+            'Colección Signature': [
+                { id: 1, name: 'Tropical', price: 20, image: 'assets/7.png' },
+                { id: 2, name: 'Fresa', price: 20, image: 'assets/8.png' },
+                { id: 3, name: 'Limón', price: 20, image: 'assets/9.png' },
+                { id: 4, name: 'Mango', price: 20, image: 'assets/10.png' },
+                { id: 5, name: 'Café', price: 20, image: 'assets/11.png' },
+                { id: 6, name: 'Vainilla', price: 20, image: 'assets/5.png' },
+                
             ],
-            'Cervezas': [
-                { id: 5, name: 'Corona', price: 15, image: 'assets/1.png' },
-                { id: 6, name: 'Heineken', price: 15, image: 'assets/1.png' },
-                { id: 7, name: 'Stella Artois', price: 15, image: 'assets/1.png' },
-                { id: 8, name: 'Budweiser', price: 15, image: 'assets/1.png' },
+            'Selección Premium': [
+                { id: 7, name: 'FrenbuezaMaracuya', price: 15, image: 'assets/1.png' },
+                { id: 8, name: 'Maracuya', price: 15, image: 'assets/2.png' },
+                { id: 9, name: 'Cereza', price: 15, image: 'assets/3.png' },
+
             ],
-            'Vinos': [
-                { id: 9, name: 'Tinto Rioja', price: 15.00, image: 'assets/1.png' },
-                { id: 10, name: 'Blanco Albariño', price: 12.00, image: 'assets/1.png' },
-                { id: 11, name: 'Rosado Provenza', price: 14.00, image: 'assets/1.png' },
-                { id: 12, name: 'Cava Brut', price: 10.00, image: 'assets/1.png' },
+            'Colección Esencia Pura': [
+            
+                { id: 10, name: 'Vainilla', price: 12.00, image: 'assets/12.png' },
+                { id: 11, name: 'Piña', price: 14.00, image: 'assets/13.png' },
+                { id: 12, name: 'Piña', price: 14.00, image: 'assets/14.png' },
+             
             ],
         };
 
@@ -451,42 +496,42 @@
           {
             nombre: "Tropical",
             descripcion: "Un toque de piña y coco, perfecto para un día soleado.",
-            imagen: "assets/sabora.jpg",
+            imagen: "assets/saborb.jpg?height=128&width=128&text=Tropical",
             origen: "Piña de Costa Rica, Coco de Filipinas",
             tiempoAnejado: "3 años"
           },
           {
             nombre: "Fresa",
             descripcion: "Refrescante y dulce, ideal para relajarte.",
-            imagen: "/placeholder.svg?height=128&width=128&text=Fresa",
+            imagen: "assets/sabord.jpg?height=128&width=128&text=Fresa",
             origen: "Fresas de California, EE. UU.",
             tiempoAnejado: "2 años"
           },
           {
             nombre: "Limón",
             descripcion: "Con un toque ácido, refrescante como ninguno.",
-            imagen: "/placeholder.svg?height=128&width=128&text=Limón",
+            imagen: "assets/saborf.jpg?height=128&width=128&text=Limón",
             origen: "Limones de Sicilia, Italia",
             tiempoAnejado: "4 años"
           },
           {
             nombre: "Mango",
             descripcion: "Dulce y exótico, te transporta al trópico.",
-            imagen: "/placeholder.svg?height=128&width=128&text=Mango",
+            imagen: "assets/saborg.jpg?height=128&width=128&text=Mango",
             origen: "Mangos de India",
             tiempoAnejado: "3 años"
           },
           {
             nombre: "Café",
             descripcion: "Intenso y aromático, perfecto para las noches.",
-            imagen: "/placeholder.svg?height=128&width=128&text=Café",
+            imagen: "assets/saborj.webp?height=128&width=128&text=Café",
             origen: "Café de Colombia",
             tiempoAnejado: "5 años"
           },
           {
             nombre: "Vainilla",
             descripcion: "Suave y cremoso, un clásico reinventado.",
-            imagen: "/placeholder.svg?height=128&width=128&text=Vainilla",
+            imagen: "assets/sabori.jpg?height=128&width=128&text=Vainilla",
             origen: "Vainilla de Madagascar",
             tiempoAnejado: "4 años"
           }
@@ -687,7 +732,71 @@
             actualizarEvento();
         }, 5000);
     </script>
-      
+    <script>
+        const cocktails = [
+            {
+                name: "Brisa Tropical",
+                image: "assets/cock1.jpg?text=Brisa+Tropical",
+                ingredients: ["Bacardi Breezer Tropical", "Ron blanco", "Jugo de piña", "Rodaja de piña"],
+                instructions: "Mezcla Bacardi Breezer Tropical con ron blanco y jugo de piña en una coctelera con hielo. Sirve en un vaso alto y decora con una rodaja de piña."
+            },
+            {
+                name: "Fresa Colada",
+                image: "assets/cock2.png?text=Fresa+Colada",
+                ingredients: ["Bacardi Breezer Fresa", "Crema de coco", "Jugo de piña", "Fresas frescas"],
+                instructions: "Licúa Bacardi Breezer Fresa con crema de coco, jugo de piña y hielo. Sirve en una copa de cóctel y decora con fresas frescas."
+            },
+            {
+                name: "Mojito Cítrico",
+                image: "assets/cock3.png?text=Mojito+Cítrico",
+                name: "Mojito Cítrico",
+            }
+        ];
+
+        let currentCocktailIndex = 0;
+
+        function updateCocktailCarousel() {
+            const carousel = document.getElementById('cocktailCarousel');
+            carousel.innerHTML = '';
+            cocktails.forEach((cocktail, index) => {
+                const img = document.createElement('img');
+                img.src = cocktail.image;
+                img.alt = cocktail.name;
+                img.className = `absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${index === currentCocktailIndex ? 'opacity-100' : 'opacity-0'}`;
+                carousel.appendChild(img);
+            });
+        }
+
+        function updateCocktailInfo() {
+            const cocktail = cocktails[currentCocktailIndex];
+            const infoDiv = document.getElementById('cocktailInfo');
+            infoDiv.innerHTML = `
+                <h3 class="text-2xl font-bold mb-4">${cocktail.name}</h3>
+                <h4 class="text-xl font-semibold mb-2">Ingredientes:</h4>
+                <ul class="list-disc list-inside mb-4">
+                    ${cocktail.ingredients.map(ing => `<li>${ing}</li>`).join('')}
+                </ul>
+                <h4 class="text-xl font-semibold mb-2">Instrucciones:</h4>
+                <p class="text-gray-300">${cocktail.instructions}</p>
+                <button onclick="nextCocktail()" class="mt-6 px-6 py-2 bg-gradient-to-r from-yellow-400 to-pink-500 text-white font-semibold rounded-full hover:from-pink-500 hover:to-yellow-400 transition-all duration-300">
+                    Siguiente Cóctel
+                </button>
+            `;
+        }
+
+        function nextCocktail() {
+            currentCocktailIndex = (currentCocktailIndex + 1) % cocktails.length;
+            updateCocktailCarousel();
+            updateCocktailInfo();
+        }
+
+        // Inicializar el carrusel y la información
+        updateCocktailCarousel();
+        updateCocktailInfo();
+
+        // Cambiar automáticamente cada 10 segundos
+        setInterval(nextCocktail, 10000);
+    </script>
 
 </body>
 
