@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilo Mejorado de Navegación</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .yellow-badge {
+            background-color: #FFD700;
+            clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+            padding: 0.5rem 1.5rem;
+            font-weight: bold;
+        }
+
+        .navbar-bg {
+            background: url('path/to/background.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white">
+    <!-- Header -->
+    <!-- Header -->
+    <header id="navbar" class="fixed w-full top-0 left-0 z-20 p-6 transition-all duration-500 ease-in-out navbar-bg">
+        <nav class="container mx-auto flex justify-around items-center">
+            <a href="/" class="text-white text-2xl font-bold transition-transform hover:scale-105">
+                <img src="assets/logo2.png" alt="Bacardi Breezer Logo" width="100" height="100">
+            </a>
+            <ul class="flex space-x-6">
+                <li><a href="/"
+                        class="yellow-badge text-black hover:bg-yellow-500 transition-colors duration-300">CONOCE MÁS DE
+                        BACARDI</a></li>
+                <li><a href="/show"
+                        class="yellow-badge text-black hover:bg-yellow-500 transition-colors duration-300">DEJA EL
+                        SHOW</a></li>
+                <li><a href="/promos"
+                        class="yellow-badge text-black hover:bg-yellow-500 transition-colors duration-300">MERCH &
+                        PROMOS</a></li>
+                <li><a href="/registro"
+                        class="yellow-badge text-black hover:bg-yellow-500 transition-colors duration-300">REGISTRO</a>
+                </li>
+                <li><a href="/compra"
+                        class="yellow-badge text-black hover:bg-yellow-500 transition-colors duration-300">COMPRA EN
+                        Ta-Da</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
+        <img src="assets/banner3.png" alt="Tropical beach background" class="absolute w-full h-full object-cover">
+
+    </section>
+    <!-- Hero Section -->
+    <main class="container mx-auto p-6 pt-24">
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <h2
+                    class="text-5xl font-extrabold text-center mb-12 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-transparent bg-clip-text animate-pulse">
+                    Experiencias Exclusivas con Bacardi
+                </h2>
+                <p class="text-xl text-center mb-16 text-gray-300">
+                    Descubre la elegancia y el estilo en cada rincón
+                </p>
+        
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12" id="venueGrid">
+                    <!-- Cards will be injected here -->
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="bg-black py-24 sm:py-32">
+                <div class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3">
+                    <div class="max-w-xl">
+                        <h2 class="text-3xl font-semibold tracking-tight text-white sm:text-4xl">Meet the Bacardi
+                            Breezer Team</h2>
+                        <p class="mt-6 text-lg text-gray-300">
+                            We’re a dynamic group of individuals who are passionate about bringing vibrant flavors and
+                            memorable experiences to our consumers. Our team is dedicated to excellence and innovation.
+                        </p>
+                    </div>
+                    <ul role="list" class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+                        <li>
+                            <div class="flex items-center gap-x-6">
+                                <img class="h-16 w-16 rounded-full"
+                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                    alt="Leslie Alexander">
+                                <div>
+                                    <h3 class="text-base font-semibold tracking-tight text-white">Leslie Alexander</h3>
+                                    <p class="text-sm font-semibold text-yellow-500">Co-Founder / CEO</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center gap-x-6">
+                                <img class="h-16 w-16 rounded-full"
+                                    src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                    alt="Michael Scott">
+                                <div>
+                                    <h3 class="text-base font-semibold tracking-tight text-white">Michael Scott</h3>
+                                    <p class="text-sm font-semibold text-yellow-500">Head of Marketing</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center gap-x-6">
+                                <img class="h-16 w-16 rounded-full"
+                                    src="https://images.unsplash.com/photo-1524503033411-c9566986fc8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                    alt="Sarah Walker">
+                                <div>
+                                    <h3 class="text-base font-semibold tracking-tight text-white">Sarah Walker</h3>
+                                    <p class="text-sm font-semibold text-yellow-500">Creative Director</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center gap-x-6">
+                                <img class="h-16 w-16 rounded-full"
+                                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                    alt="Anna Kim">
+                                <div>
+                                    <h3 class="text-base font-semibold tracking-tight text-white">Anna Kim</h3>
+                                    <p class="text-sm font-semibold text-yellow-500">Product Manager</p>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- More people... -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-gradient-to-b  to-black">
+            <div class="container mx-auto px-4">
+                <h2
+                    class="text-5xl font-extrabold text-center mb-12 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-transparent bg-clip-text">
+                    Nuestras Bebidas
+                </h2>
+
+                <div class="mb-8">
+                    <div class="flex justify-center space-x-4" id="categoryButtons">
+                        <!-- Los botones de categoría se generarán aquí -->
+                    </div>
+                </div>
+
+                <div class="relative w-full max-w-6xl mx-auto overflow-hidden">
+                    <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+                        <!-- Las tarjetas de producto se generarán dinámicamente aquí -->
+                    </div>
+
+                    <button id="prev"
+                        class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-yellow-500 rounded-full p-3 hover:bg-opacity-75 transition">
+                        &#10094;
+                    </button>
+                    <button id="next"
+                        class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-yellow-500 rounded-full p-3 hover:bg-opacity-75 transition">
+                        &#10095;
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Seccion de sabores  -->
+        <section class="py-24">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <h2
+                    class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 text-transparent bg-clip-text">
+                    Descubre Nuestros Sabores y Orígenes
+                </h2>
+                <div id="saboresGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Contenido generado por JavaScript -->
+                </div>
+
+                <div id="saborDetalle" class="hidden mt-12 bg-gray-800 rounded-lg p-8 max-w-2xl mx-auto text-center">
+                    <h3 id="saborNombre" class="text-2xl font-bold mb-4"></h3>
+                    <img id="saborImagen" src="" alt="" class="mx-auto w-40 h-40 mb-6 rounded-full" />
+                    <p id="saborDescripcion" class="text-gray-300 mb-4"></p>
+                    <div class="flex items-center justify-center mb-2">
+                        <span class="mr-2 text-yellow-400" lucide-map-pin></span>
+                        <p id="saborOrigen"></p>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <span class="mr-2 text-yellow-400" lucide-calendar></span>
+                        <p id="saborTiempoAnejado"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- seccionde clientes  -->
+      
+        <section class="py-24 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <h2 class="text-4xl font-bold text-center mb-12 gradient-text bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500">
+                    Eventos Bacardi Breezer
+                </h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <div class="relative h-96">
+                        <div id="eventImages" class="absolute inset-0"></div>
+                    </div>
+                    <div id="eventInfo"></div>
+                </div>
+                <div id="eventDots" class="flex justify-center mt-8"></div>
+            </div>
+        </section>
+    
+        <div id="eventModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
+            <div class="bg-gray-800 p-8 rounded-lg max-w-2xl w-full">
+                <h3 id="modalTitle" class="text-3xl font-bold mb-4"></h3>
+                <img id="modalImage" class="w-full h-64 object-cover rounded-lg mb-6" src="" alt="">
+                <p id="modalDescription" class="text-gray-300 mb-6"></p>
+                <div id="modalDetails" class="mb-6"></div>
+                <button id="closeModal" class="px-6 py-3 rounded-full text-white font-semibold bg-gradient-to-r from-yellow-400 to-pink-500 hover:from-pink-500 hover:to-yellow-500 transition-all duration-300">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+        <section class="bg-black py-24 text-white">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <h2 class="text-3xl font-semibold text-center mb-12">Inspiración y Tips</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <article>
+                        <h3 class="text-xl font-bold">5 Cócteles Refrescantes con Bacardi Breezer</h3>
+                        <p class="mt-2 text-gray-300">Descubre recetas fáciles para preparar cócteles únicos en casa.
+                        </p>
+                    </article>
+                    <article>
+                        <h3 class="text-xl font-bold">Tendencias de Bebidas para el 2024</h3>
+                        <p class="mt-2 text-gray-300">Mantente a la vanguardia con lo que viene en el mundo de las
+                            bebidas.</p>
+                    </article>
+                    <!-- Más artículos... -->
+                </div>
+            </div>
+        </section>
+        <section class="bg-gray-900 py-12 text-white">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-2xl font-semibold mb-4">Únete a Nuestra Comunidad</h2>
+                <p class="text-gray-300 mb-6">Suscríbete para recibir novedades, eventos y promociones exclusivas de
+                    Bacardi Breezer.</p>
+                <form class="flex flex-col sm:flex-row justify-center gap-4">
+                    <input type="email" placeholder="Ingresa tu email"
+                        class="px-4 py-2 text-gray-900 rounded-lg sm:w-1/2">
+                    <button class="bg-yellow-500 px-6 py-2 rounded-lg font-semibold text-black hover:bg-yellow-600">
+                        Suscribirse
+                    </button>
+                </form>
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+
+
+
+
+    <!-- Script para animación -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script>
+        const products = {
+            'Refrescos': [
+                { id: 1, name: 'Ceresa + Ron', price: 15, image: 'assets/1.png' },
+                { id: 2, name: 'Pepsi', price: 15, image: 'assets/2.png' },
+                { id: 3, name: 'Sprite', price: 15, image: 'assets/3.png' },
+                { id: 4, name: 'Fanta', price: 1.50, image: 'assets/4.png' },
+            ],
+            'Cervezas': [
+                { id: 5, name: 'Corona', price: 15, image: 'assets/1.png' },
+                { id: 6, name: 'Heineken', price: 15, image: 'assets/1.png' },
+                { id: 7, name: 'Stella Artois', price: 15, image: 'assets/1.png' },
+                { id: 8, name: 'Budweiser', price: 15, image: 'assets/1.png' },
+            ],
+            'Vinos': [
+                { id: 9, name: 'Tinto Rioja', price: 15.00, image: 'assets/1.png' },
+                { id: 10, name: 'Blanco Albariño', price: 12.00, image: 'assets/1.png' },
+                { id: 11, name: 'Rosado Provenza', price: 14.00, image: 'assets/1.png' },
+                { id: 12, name: 'Cava Brut', price: 10.00, image: 'assets/1.png' },
+            ],
+        };
+
+        const carousel = document.getElementById('carousel');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        const categoryButtons = document.getElementById('categoryButtons');
+        let currentCategory = Object.keys(products)[0];
+        let currentIndex = 0;
+
+        function createProductCard(product) {
+            const card = document.createElement('div');
+            card.className = 'w-1/3 flex flex-col items-center p-4   shadow dark:bg-gray-800 dark:border-gray-700 fade-in mx-2';
+            card.innerHTML = `
+                <img class="w-50% h-full object-cover mb-4 rounded" src="${product.image}" alt="${product.name}">
+                <h3 class="text-xl font-semibold tracking-tight text-[#FFD700] dark:text-white mb-2">${product.name}</h3>
+                <div class="flex items-center justify-between w-full">
+                    <span class="text-2xl font-bold text-[#FFD700] dark:text-white">S/.${product.price.toFixed(2)}</span>
+                    <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 transition">
+                        Añadir
+                    </button>
+                </div>
+            `;
+            return card;
+        }
+
+        function updateCarousel() {
+            carousel.innerHTML = '';
+            const categoryProducts = products[currentCategory];
+            for (let i = 0; i < 3; i++) {
+                const index = (currentIndex + i) % categoryProducts.length;
+                carousel.appendChild(createProductCard(categoryProducts[index]));
+            }
+        }
+
+        function nextSlide() {
+            const categoryProducts = products[currentCategory];
+            currentIndex = (currentIndex + 1) % categoryProducts.length;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            const categoryProducts = products[currentCategory];
+            currentIndex = (currentIndex - 1 + categoryProducts.length) % categoryProducts.length;
+            updateCarousel();
+        }
+
+        function createCategoryButtons() {
+            Object.keys(products).forEach(category => {
+                const button = document.createElement('button');
+                button.textContent = category;
+                button.className = 'px-4 py-2 rounded-full text-white transition';
+                button.classList.add(category === currentCategory ? 'bg-blue-600' : 'bg-gray-600');
+                button.addEventListener('click', () => changeCategory(category));
+                categoryButtons.appendChild(button);
+            });
+        }
+
+        function changeCategory(category) {
+            currentCategory = category;
+            currentIndex = 0;
+            updateCarousel();
+            updateCategoryButtons();
+        }
+
+        function updateCategoryButtons() {
+            Array.from(categoryButtons.children).forEach(button => {
+                button.classList.remove('bg-blue-600', 'bg-gray-600');
+                button.classList.add(button.textContent === currentCategory ? 'bg-blue-600' : 'bg-gray-600');
+            });
+        }
+
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+
+        // Inicializar el carrusel y los botones de categoría
+        createCategoryButtons();
+        updateCarousel();
+
+        // Cambio automático cada 5 segundos
+        setInterval(nextSlide, 5000);
+    </script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Animación para el contenido del hero
+        gsap.to("#hero-content", {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power3.out",
+        });
+
+        // Animación para el navbar cuando se hace scroll
+        const navbar = document.getElementById("navbar");
+        ScrollTrigger.create({
+            start: "top top",
+            end: 99999,
+            onUpdate: (self) => {
+                const progress = self.progress;
+                gsap.to(navbar, {
+                    backgroundColor: `rgba(0, 0, 0, ${Math.min(0.8, progress * 2)})`,
+                    padding: `${1.5 - progress * 0.5}rem`,
+                    duration: 0.3,
+                    ease: "power2.out",
+                });
+            },
+        });
+
+    </script>
+    <script>
+        const exclusiveClients = [
+            {
+                name: "Skyline Lounge",
+                location: "Mall de Sur",
+                image: "assets/local1.jpg",
+                description: "Un espacio exclusivo que refleja la elegancia y el estilo de vida premium de nuestros clientes."
+            },
+            {
+                name: "Neon Dreams",
+                location: "Miami",
+                image: "assets/local2.jpg",
+                description: "Un lugar vibrante que captura la esencia de las experiencias nocturnas de alta gama."
+            },
+            {
+                name: "Crystal Cave",
+                location: "Las Vegas",
+                image: "assets/local4.jpg",
+                description: "Un refugio de lujo en el corazón del desierto, donde se vive la exclusividad."
+            },
+        ];
+    
+        const venueGrid = document.getElementById('venueGrid');
+    
+        exclusiveClients.forEach(client => {
+            const card = document.createElement('div');
+            card.className = 'group relative overflow-hidden rounded-2xl shadow-lg transition-transform transform hover:scale-105';
+    
+            card.innerHTML = `
+                <img src="${client.image}" alt="${client.name}" class="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-75 transition-opacity duration-500 group-hover:opacity-90"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6 transition-all duration-500 group-hover:bottom-4">
+                  
+                  <a href="#" class="inline-block bg-gradient-to-r from-yellow-400 to-red-500 text-black font-bold py-2 px-4 rounded-full transition-transform duration-300 hover:from-red-500 hover:to-yellow-400 hover:scale-105">
+                    Explorar Exclusividad
+                  </a>
+                </div>
+            `;
+    
+            venueGrid.appendChild(card);
+        });
+    </script>
+    
+    <script>
+        // Definición de los sabores
+        const sabores = [
+          {
+            nombre: "Tropical",
+            descripcion: "Un toque de piña y coco, perfecto para un día soleado.",
+            imagen: "assets/sabora.jpg",
+            origen: "Piña de Costa Rica, Coco de Filipinas",
+            tiempoAnejado: "3 años"
+          },
+          {
+            nombre: "Fresa",
+            descripcion: "Refrescante y dulce, ideal para relajarte.",
+            imagen: "/placeholder.svg?height=128&width=128&text=Fresa",
+            origen: "Fresas de California, EE. UU.",
+            tiempoAnejado: "2 años"
+          },
+          {
+            nombre: "Limón",
+            descripcion: "Con un toque ácido, refrescante como ninguno.",
+            imagen: "/placeholder.svg?height=128&width=128&text=Limón",
+            origen: "Limones de Sicilia, Italia",
+            tiempoAnejado: "4 años"
+          },
+          {
+            nombre: "Mango",
+            descripcion: "Dulce y exótico, te transporta al trópico.",
+            imagen: "/placeholder.svg?height=128&width=128&text=Mango",
+            origen: "Mangos de India",
+            tiempoAnejado: "3 años"
+          },
+          {
+            nombre: "Café",
+            descripcion: "Intenso y aromático, perfecto para las noches.",
+            imagen: "/placeholder.svg?height=128&width=128&text=Café",
+            origen: "Café de Colombia",
+            tiempoAnejado: "5 años"
+          },
+          {
+            nombre: "Vainilla",
+            descripcion: "Suave y cremoso, un clásico reinventado.",
+            imagen: "/placeholder.svg?height=128&width=128&text=Vainilla",
+            origen: "Vainilla de Madagascar",
+            tiempoAnejado: "4 años"
+          }
+        ];
+      
+        // Seleccionar los elementos del DOM
+        const saboresGrid = document.getElementById('saboresGrid');
+        const saborDetalle = document.getElementById('saborDetalle');
+        const saborNombre = document.getElementById('saborNombre');
+        const saborImagen = document.getElementById('saborImagen');
+        const saborDescripcion = document.getElementById('saborDescripcion');
+        const saborOrigen = document.getElementById('saborOrigen');
+        const saborTiempoAnejado = document.getElementById('saborTiempoAnejado');
+      
+        // Función para mostrar el detalle de un sabor
+        function mostrarDetalle(sabor) {
+          saborNombre.textContent = sabor.nombre;
+          saborImagen.src = sabor.imagen;
+          saborImagen.alt = sabor.nombre;
+          saborDescripcion.textContent = sabor.descripcion;
+          saborOrigen.textContent = `Origen: ${sabor.origen}`;
+          saborTiempoAnejado.textContent = `Tiempo de añejado: ${sabor.tiempoAnejado}`;
+          saborDetalle.classList.remove('hidden');
+        }
+      
+        // Generar los elementos HTML de cada sabor
+        sabores.forEach(sabor => {
+          const saborCard = document.createElement('div');
+          saborCard.className = 'bg-gray-800 rounded-lg p-6 text-center cursor-pointer transition-transform hover:scale-105';
+          saborCard.onclick = () => mostrarDetalle(sabor);
+      
+          const imagen = document.createElement('img');
+          imagen.src = sabor.imagen;
+          imagen.alt = sabor.nombre;
+          imagen.className = 'mx-auto w-32 h-32 mb-4 rounded-full';
+          
+          const nombre = document.createElement('h3');
+          nombre.className = 'text-xl font-bold';
+          nombre.textContent = sabor.nombre;
+          
+          const descripcion = document.createElement('p');
+          descripcion.className = 'text-gray-300 mt-2';
+          descripcion.textContent = sabor.descripcion;
+      
+          saborCard.appendChild(imagen);
+          saborCard.appendChild(nombre);
+          saborCard.appendChild(descripcion);
+      
+          saboresGrid.appendChild(saborCard);
+        });
+      </script>
+      <script>
+        const eventos = [
+            {
+                id: 1,
+                titulo: "Festival de Música Bacardi",
+                descripcion: "Únete a nosotros en el festival más vibrante del año con artistas de renombre mundial.",
+                imagen: "assets/evento1.webp",
+                fecha: "15 de Julio, 2024",
+                ubicacion: "Playa del Carmen, México",
+                hora: "18:00 - 02:00"
+            },
+            {
+                id: 2,
+                titulo: "Fiesta de Verano Bacardi",
+                descripcion: "Disfruta del verano con nuestros sabores refrescantes y música en vivo junto al mar.",
+                imagen: "assets/evento2.webp",
+                fecha: "5 de Agosto, 2024",
+                ubicacion: "Ibiza, España",
+                hora: "16:00 - 23:00"
+            },
+            {
+                id: 3,
+                titulo: "Noche de Cócteles Bacardi",
+                descripcion: "Aprende a preparar cócteles exclusivos con los mejores bartenders del mundo.",
+                imagen: "assets/evento3.jpg",
+                fecha: "20 de Septiembre, 2024",
+                ubicacion: "Nueva York, EE. UU.",
+                hora: "20:00 - 00:00"
+            },
+            {
+                id: 4,
+                titulo: "Carnaval Bacardi",
+                descripcion: "Vive la experiencia del carnaval con sabores tropicales y ritmos caribeños.",
+                imagen: "assets/evento4.jpg",
+                fecha: "10 de Febrero, 2025",
+                ubicacion: "Río de Janeiro, Brasil",
+                hora: "14:00 - 04:00"
+            }
+        ];
+
+        const colorClasses = [
+            'from-pink-500 to-yellow-500',
+            'from-purple-500 to-blue-500',
+            'from-green-500 to-teal-500',
+            'from-red-500 to-orange-500'
+        ];
+
+        let indiceActivo = 0;
+
+        function actualizarEvento() {
+            const evento = eventos[indiceActivo];
+            const eventImages = document.getElementById('eventImages');
+            const eventInfo = document.getElementById('eventInfo');
+            const eventDots = document.getElementById('eventDots');
+
+            // Actualizar imágenes
+            eventImages.innerHTML = `
+                <img src="${evento.imagen}" alt="${evento.titulo}" class="absolute inset-0 w-70% h-full object-cover rounded-lg fade-in">
+            `;
+
+            // Actualizar información del evento
+            eventInfo.innerHTML = `
+                <div class="fade-in">
+                    <h3 class="text-3xl font-bold mb-4">${evento.titulo}</h3>
+                    <p class="text-gray-300 mb-6">${evento.descripcion}</p>
+                    <div class="flex items-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                        </svg>
+                        <p>${evento.fecha}</p>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                        </svg>
+                        <p>${evento.ubicacion}</p>
+                    </div>
+                    <div class="flex items-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                        </svg>
+                        <p>${evento.hora}</p>
+                    </div>
+                    <button onclick="mostrarModal(${evento.id})" class="px-6 py-3 rounded-full text-white font-semibold transition-all duration-300 bg-gradient-to-r ${colorClasses[indiceActivo % colorClasses.length]} hover:shadow-lg hover:scale-105">
+                        Más información
+                    </button>
+                </div>
+            `;
+
+            // Actualizar puntos de navegación
+            eventDots.innerHTML = eventos.map((_, index) => `
+                <button onclick="cambiarEvento(${index})" class="w-3 h-3 rounded-full mx-2 transition-all duration-300 ${index === indiceActivo ? 'bg-yellow-400 scale-125' : 'bg-gray-600'}"></button>
+            `).join('');
+        }
+
+        function cambiarEvento(index) {
+            indiceActivo = index;
+            actualizarEvento();
+        }
+
+        function mostrarModal(id) {
+            const evento = eventos.find(e => e.id === id);
+            const modal = document.getElementById('eventModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalImage = document.getElementById('modalImage');
+            const modalDescription = document.getElementById('modalDescription');
+            const modalDetails = document.getElementById('modalDetails');
+
+            modalTitle.textContent = evento.titulo;
+            modalImage.src = evento.imagen;
+            modalImage.alt = evento.titulo;
+            modalDescription.textContent = evento.descripcion;
+            modalDetails.innerHTML = `
+                <div class="flex items-center mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                    </svg>
+                    <p>${evento.fecha}</p>
+                </div>
+                <div class="flex items-center mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                    </svg>
+                    <p>${evento.ubicacion}</p>
+                </div>
+                <div class="flex items-center mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                    </svg>
+                    <p>${evento.hora}</p>
+                </div>
+            `;
+
+            modal.classList.remove('hidden');
+        }
+
+        document.getElementById('closeModal').addEventListener('click', () => {
+            document.getElementById('eventModal').classList.add('hidden');
+        });
+
+        // Inicializar el carrusel
+        actualizarEvento();
+
+        // Cambio automático cada 5 segundos
+        setInterval(() => {
+            indiceActivo = (indiceActivo + 1) % eventos.length;
+            actualizarEvento();
+        }, 5000);
+    </script>
+      
+
+</body>
+
+</html>
